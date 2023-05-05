@@ -8,12 +8,12 @@
   "devDependencies": {
     "@enhance/arc-plugin-enhance": "^5.0.4",
     "@enhance/types": "latest",
-    "eslint": "latest",
+    "eslint": "latest"
   },
   "dependencies": {
     "@architect/architect": "^10.8.0",
     "@begin/validator": "^1.0.0",
-    "@enhance/form-elements": "github:enhance-dev/form-elements",
+    "@enhance/form-elements": "github:enhance-dev/form-elements"
   },
   "eslintConfig": {
     "env": {

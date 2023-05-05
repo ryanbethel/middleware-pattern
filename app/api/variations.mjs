@@ -33,7 +33,8 @@ import navData from '../middleware/nav-data.mjs'
 // export const get = midWrap([vanilla, hybrid, explicit, fancy])
 
 // Type C pass middleware as arguments
-export const get = midWrap(vanilla, hybrid, explicit, fancy, navData)
+// export const get = midWrap(vanilla, hybrid, explicit, fancy, navData)
+export const get = midWrap(vanilla, hybrid, explicit, fancy)
 
 // Type 1
 async function vanilla(req) {

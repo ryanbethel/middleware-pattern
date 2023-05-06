@@ -13,7 +13,8 @@
   "dependencies": {
     "@architect/architect": "^10.8.0",
     "@begin/validator": "^1.0.0",
-    "@enhance/form-elements": "github:enhance-dev/form-elements"
+    "@enhance/form-elements": "github:enhance-dev/form-elements",
+    "path-to-regex": "^1.3.8"
   },
   "eslintConfig": {
     "env": {

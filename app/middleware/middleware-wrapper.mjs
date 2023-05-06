@@ -7,7 +7,6 @@ import { pathToRegexp } from 'path-to-regexp';
 export default function chainWrapper(...chain) {
   const funcChain = Array.isArray(chain[0]) ? chain[0] : chain
   function global(req) {
-    // const funks = globalMiddleware[req.path]
     const funks = resolvePath(req.path)?.middleware
     if (!funks || !funks?.length) {
       return
@@ -15,7 +14,6 @@ export default function chainWrapper(...chain) {
       return ((req) => {
         for (let i = 0; i < funks.length; i++) {
           const result = funcWrapper(funks[i])(req);
-          // should be if it returns null?
           if (result) return result
         }
       })(req)
@@ -31,7 +29,6 @@ export default function chainWrapper(...chain) {
 export function funcWrapper(func) {
   return function(req) {
     const resp = enhanceResponse(req)
-    // binding? ?????
     let result = func(req, resp)
     if (result?.send && ((typeof result.send) === 'function')) {
       return result.send()
